@@ -12,8 +12,9 @@ A viewController with looped gradient background, these gradient properties can 
 Currently the background gradient contains two colors. And these colors are divided into several colors to present the "loop" effect. 
 
 GradientView supports:
+- Gradient with 2 colors with user defined angle
 - Device orientation
-- Animation will be stored while view reappearing.
+- Animation will be stored while view reappearing
 
 
 ### Usage
