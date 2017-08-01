@@ -2,7 +2,7 @@
 //  BorderButton.swift
 //  GradientVC
 //
-//  Created by Antelis on 01/08/2017.
+//  Created by Antelis
 //  Copyright © 2017 shion. All rights reserved.
 //
 
