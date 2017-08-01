@@ -9,14 +9,26 @@ A viewController with looped gradient background, these gradient properties can 
 Currently the background gradient contains two colors. And these colors are divided into several colors to present the "loop" effect.
 
 ### Usage
+
 ```swift
-  override func viewDidLoad() {
-      super.viewDidLoad()
-      
-      let testview = GradientView(frame: self.frame, hexColor1: "#F298e7", hexColor2: "#a5f9f9", angle: 25.0)
+  override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if gradient == nil {
+            gradient = GradientView(frame: self.view.bounds, hexColor1: "#F298e7", hexColor2: "#a5f9f9", angle: 25.0)
+            view.addSubview(gradient)
+            view.sendSubview(toBack: gradient)
+            gradient.isUserInteractionEnabled = false
+        } else {
+            gradient.start()
+        }
+    }
     
-      view.insertSubview(testview, at: 0)
-  }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if gradient != nil {
+            gradient.stop()
+        }
+    }
 ```
 
 ### Setup GradientView in IB
