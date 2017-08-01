@@ -2,7 +2,7 @@
 //  GradientView.swift
 //  GradientVC
 //
-//  Created by Antelis on
+//  Created by Antelis
 //  Copyright © 2017 shion. All rights reserved.
 //
 
