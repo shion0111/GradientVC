@@ -1,4 +1,6 @@
 # GradientVC
+![](https://travis-ci.org/shion0111/GradientVC.svg?branch=master)
+
 An old experiement project ported to swift...
 
 A viewController with looped gradient background, these gradient properties can be changed in IB.
