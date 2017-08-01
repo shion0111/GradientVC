@@ -21,6 +21,7 @@ class GradientView: UIView, CAAnimationDelegate {
     fileprivate var gradient : CAGradientLayer?;
     fileprivate var currentGradient: Int = 0
     fileprivate var colors: [UIColor] = []
+    fileprivate var boundNeeded : Bool = false
     
     
     convenience init(frame: CGRect, hexColor1: String, hexColor2: String, angle: Double) {
@@ -28,7 +29,9 @@ class GradientView: UIView, CAAnimationDelegate {
         self.init(frame: frame)
         IBColor1 = UIColor.getColorWithHex(hexColor1)
         IBColor2 = UIColor.getColorWithHex(hexColor2)
-        self.Angle = angle
+        Angle = angle
+        
+        boundNeeded = true
         
     }
     
@@ -47,10 +50,24 @@ class GradientView: UIView, CAAnimationDelegate {
         gradient?.removeFromSuperlayer()
         gradient = nil
     }
-    
+    fileprivate func boundToSuperview() {
+        if !boundNeeded { return }
+        if let superview = self.superview {
+            /*
+             guard let superview = self.superview else {
+                 print("Error! `superview` was nil – call `addSubview(view: UIView)` before calling `bindFrameToSuperviewBounds()` to fix this.")
+                 return
+             }
+             */
+            self.translatesAutoresizingMaskIntoConstraints = false
+            superview.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: ["subview": self]))
+            superview.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: ["subview": self]))
+        }
+    }
     //  setup CAGradientLayer, and colors //
     fileprivate func setup(){
         
+        boundToSuperview()
         calcColors()
         gradient = CAGradientLayer()
         
@@ -132,8 +149,14 @@ class GradientView: UIView, CAAnimationDelegate {
             setup()
             animateLayer()
         }
-        
-        gradient?.frame = self.bounds
+        /*
+        if superview != nil{
+            let f0 = superview?.frame
+            let f = self.frame
+            self.frame = CGRect(x: f.origin.x, y: f.origin.y, width: f0!.size.width, height: f0!.size.height)
+        }
+         */
+        gradient?.frame = self.frame
         gradient?.setNeedsDisplay()
     }
     override func removeFromSuperview() {
@@ -157,8 +180,10 @@ extension UIColor {
         
         var rgbValue : UInt32 = 0
         if scanner.scanHexInt32(&rgbValue) {
-        
-            return UIColor(red: CGFloat(((rgbValue & 0xFF0000) >> 16))/255.0, green: CGFloat(((rgbValue & 0x00FF00) >> 16))/255.0, blue: CGFloat(((rgbValue & 0x0000FF) >> 16))/255.0, alpha: 1.0)
+            
+            let res = UIColor(red: CGFloat(((rgbValue & 0xFF0000) >> 16))/255.0, green: CGFloat(((rgbValue & 0x00FF00) >> 8))/255.0, blue: CGFloat(((rgbValue & 0x0000FF)))/255.0, alpha: 1.0)
+
+            return res
         }
         //  if failed
         return UIColor.white
