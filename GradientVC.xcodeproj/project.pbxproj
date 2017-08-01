@@ -14,7 +14,18 @@
 		CB886B3B1F2F1E7F00D46201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB886B3A1F2F1E7F00D46201 /* Assets.xcassets */; };
 		CB886B3E1F2F1E7F00D46201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB886B3C1F2F1E7F00D46201 /* LaunchScreen.storyboard */; };
 		CB886B461F2F1EB200D46201 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB886B451F2F1EB200D46201 /* GradientView.swift */; };
+		CB8EE6911F30779B0064AFDA /* GradientVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE6901F30779B0064AFDA /* GradientVCTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB8EE6931F30779B0064AFDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB886B281F2F1E7E00D46201 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB886B2F1F2F1E7E00D46201;
+			remoteInfo = GradientVC;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CB241BEE1F3052B50047F6A6 /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
@@ -26,10 +37,20 @@
 		CB886B3D1F2F1E7F00D46201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB886B3F1F2F1E7F00D46201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB886B451F2F1EB200D46201 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		CB8EE68E1F30779B0064AFDA /* GradientVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GradientVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB8EE6901F30779B0064AFDA /* GradientVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientVCTests.swift; sourceTree = "<group>"; };
+		CB8EE6921F30779B0064AFDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CB886B2D1F2F1E7E00D46201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB8EE68B1F30779B0064AFDA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				CB886B321F2F1E7E00D46201 /* GradientVC */,
+				CB8EE68F1F30779B0064AFDA /* GradientVCTests */,
 				CB886B311F2F1E7E00D46201 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				CB886B301F2F1E7E00D46201 /* GradientVC.app */,
+				CB8EE68E1F30779B0064AFDA /* GradientVCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +91,15 @@
 				CB241BEE1F3052B50047F6A6 /* BorderButton.swift */,
 			);
 			path = GradientVC;
+			sourceTree = "<group>";
+		};
+		CB8EE68F1F30779B0064AFDA /* GradientVCTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB8EE6901F30779B0064AFDA /* GradientVCTests.swift */,
+				CB8EE6921F30779B0064AFDA /* Info.plist */,
+			);
+			path = GradientVCTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +122,24 @@
 			productReference = CB886B301F2F1E7E00D46201 /* GradientVC.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CB8EE68D1F30779B0064AFDA /* GradientVCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB8EE6951F30779B0064AFDA /* Build configuration list for PBXNativeTarget "GradientVCTests" */;
+			buildPhases = (
+				CB8EE68A1F30779B0064AFDA /* Sources */,
+				CB8EE68B1F30779B0064AFDA /* Frameworks */,
+				CB8EE68C1F30779B0064AFDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB8EE6941F30779B0064AFDA /* PBXTargetDependency */,
+			);
+			name = GradientVCTests;
+			productName = GradientVCTests;
+			productReference = CB8EE68E1F30779B0064AFDA /* GradientVCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,6 +152,10 @@
 				TargetAttributes = {
 					CB886B2F1F2F1E7E00D46201 = {
 						CreatedOnToolsVersion = 9.0;
+					};
+					CB8EE68D1F30779B0064AFDA = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = CB886B2F1F2F1E7E00D46201;
 					};
 				};
 			};
@@ -119,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				CB886B2F1F2F1E7E00D46201 /* GradientVC */,
+				CB8EE68D1F30779B0064AFDA /* GradientVCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +186,13 @@
 				CB886B3E1F2F1E7F00D46201 /* LaunchScreen.storyboard in Resources */,
 				CB886B3B1F2F1E7F00D46201 /* Assets.xcassets in Resources */,
 				CB886B391F2F1E7F00D46201 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB8EE68C1F30779B0064AFDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +210,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB8EE68A1F30779B0064AFDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB8EE6911F30779B0064AFDA /* GradientVCTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB8EE6941F30779B0064AFDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB886B2F1F2F1E7E00D46201 /* GradientVC */;
+			targetProxy = CB8EE6931F30779B0064AFDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CB886B371F2F1E7F00D46201 /* Main.storyboard */ = {
@@ -301,6 +379,36 @@
 			};
 			name = Release;
 		};
+		CB8EE6961F30779B0064AFDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 392DCPHLMM;
+				INFOPLIST_FILE = GradientVCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shion.GradientVCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GradientVC.app/GradientVC";
+			};
+			name = Debug;
+		};
+		CB8EE6971F30779B0064AFDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 392DCPHLMM;
+				INFOPLIST_FILE = GradientVCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shion.GradientVCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GradientVC.app/GradientVC";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -318,6 +426,15 @@
 			buildConfigurations = (
 				CB886B431F2F1E7F00D46201 /* Debug */,
 				CB886B441F2F1E7F00D46201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB8EE6951F30779B0064AFDA /* Build configuration list for PBXNativeTarget "GradientVCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB8EE6961F30779B0064AFDA /* Debug */,
+				CB8EE6971F30779B0064AFDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
