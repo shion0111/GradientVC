@@ -2,14 +2,18 @@
 ![](https://travis-ci.org/shion0111/GradientVC.svg?branch=master)
 
 <p align="center">
-  <img src="https://github.com/shion0111/GradientVC/blob/master/gradientVC.gif" height="480"/>
+  <img src="https://github.com/shion0111/GradientVC/blob/master/gradientVC.gif"/>
 </p
 An old experiement project ported to swift...
 
 A viewController with looped gradient background, these gradient properties can be changed in IB.
 
 ### About GradientView
-Currently the background gradient contains two colors. And these colors are divided into several colors to present the "loop" effect. GradientView supports device orientation and the animation will be reset when view re-appearing.
+Currently the background gradient contains two colors. And these colors are divided into several colors to present the "loop" effect. 
+
+GradientView supports:
+- Device orientation
+- Animation will be stored while view reappearing.
 
 
 ### Usage
