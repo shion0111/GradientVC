@@ -15,6 +15,8 @@ GradientView supports:
 - Device orientation
 - Animation will be restored when view reappearing
 
+### Installation
+Simply add [GradientView.swift](https://github.com/shion0111/GradientVC/blob/master/GradientVC/GradientView.swift) to the  project.
 
 ### Usage
 
@@ -38,8 +40,6 @@ GradientView supports:
         }
     }
 ```
-### Installation
-Simply add [GradientView.swift](https://github.com/shion0111/GradientVC/blob/master/GradientVC/GradientView.swift) to the  project.
 
 ### Setup GradientView in IB
 - IBColor1
