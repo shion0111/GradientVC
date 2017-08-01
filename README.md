@@ -2,7 +2,7 @@
 ![](https://travis-ci.org/shion0111/GradientVC.svg?branch=master)
 
 <p align="center">
-  <img src="https://github.com/shion0111/GradientVC/blob/master/gradientVC.gif"/>
+  <img src="https://github.com/shion0111/GradientVC/blob/master/gradientVC.gif" height="480"/>
 </p
 An old experiement project ported to swift...
 
