@@ -1,9 +1,7 @@
 # GradientVC
 ![](https://travis-ci.org/shion0111/GradientVC.svg?branch=master)
 
-A former prototyping project ported to swift...
-
-A viewController with looped gradient background, these gradient properties can be changed in IB.
+A former prototyping project has been ported to swift, a view controller with looped gradient background. These gradient properties can be edited in IB.
 <p align="center">
   <img src="https://github.com/shion0111/GradientVC/blob/master/gradientVC.gif"/>
 </p>
