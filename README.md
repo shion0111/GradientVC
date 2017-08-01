@@ -38,6 +38,8 @@ GradientView supports:
         }
     }
 ```
+### Installation
+Simply add [GradientView.swift](https://github.com/shion0111/GradientVC/blob/master/GradientVC/GradientView.swift) to the  project.
 
 ### Setup GradientView in IB
 - IBColor1
